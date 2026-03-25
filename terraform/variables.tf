@@ -15,3 +15,27 @@ variable "container_port" {
   type        = number
   default     = 5000
 }
+
+variable "db_name" {
+  description = "PostgreSQL database name"
+  type        = string
+  default     = "appdb"
+}
+
+variable "db_username" {
+  description = "PostgreSQL username"
+  type        = string
+  default     = "appuser"
+}
+
+variable "db_password" {
+  description = "PostgreSQL password"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_port" {
+  description = "PostgreSQL port"
+  type        = number
+  default     = 5432
+}
