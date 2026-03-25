@@ -95,3 +95,11 @@ Add HTTPS with ACM and Route 53
 Add CloudWatch alarms and dashboards
 Add private subnets and NAT Gateway for stricter security
 Add autoscaling for ECS service
+
+## Architecture (3-Tier)
+
+Internet → ALB → ECS Fargate → RDS PostgreSQL
+
+- ALB handles incoming traffic
+- ECS runs the containerized app
+- RDS stores application data in private subnets****
